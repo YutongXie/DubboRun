@@ -19,4 +19,8 @@
                    ref="infoQueryService" protocol="dubbo"/>
 
     <bean id="infoQueryService" class="com.zhe.qiushui.DubboRun.service.InfoServiceImpl" />
+
+    <dubbo:service interface="com.qiushui.service.PriceService"
+                   ref = "productPriceQueryService" protocol="dubbo" />
+    <bean id="productPriceQueryService" class="com.zhe.qiushui.DubboRun.service.ProductPriceServiceImpl" />
 </beans>
